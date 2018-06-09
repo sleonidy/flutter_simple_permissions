@@ -63,7 +63,8 @@ enum Permission {
   AlwaysLocation,
   ReadContacts,
   Vibrate,
-  WriteContacts
+  WriteContacts,
+  ReceiveBootCompleted
 }
 
 /// Permissions status enum (iOs)
@@ -104,6 +105,9 @@ String getPermissionString(Permission permission) {
       break;
     case Permission.WriteContacts:
       res = "WRITE_CONTACTS";
+      break;
+    case Permission.ReceiveBootCompleted:
+      res = "RECEIVE_BOOT_COMPLETED";
       break;
   }
   return res;
